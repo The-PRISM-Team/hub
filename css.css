@@ -24,7 +24,8 @@ body, body.light {
 
 
 .top-bar {
-    background-color: var(--bg);
+    background-color: #0000;
+    backdrop-filter: brightness(150%) blur(2px);
 
     position: fixed;
     top: 0;
