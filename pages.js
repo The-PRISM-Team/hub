@@ -16,8 +16,10 @@ function handleHash() {
         const page = pages[i];
 
         if (page.id === location.hash.substring(1)) {
-            page.style.opacity = '1';
-            document.title = `${page.dataset.label} - PRISM Hub`;
+            setTimeout(()=>{
+                page.style.opacity = '1';
+                document.title = `${page.dataset.label} - PRISM Hub`;
+            }, 1.5e3)
         } else {
             page.style.opacity = '0';
         }

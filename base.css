@@ -21,11 +21,13 @@ body.dark {
     --bg: #080010;
     --fg: #fff;
     --acc: #00ff80; /* accent color */
+    color: #fff;
 }
 body, body.light {
     --bg: #eee;
     --fg: #000;
     --acc: #ff0080; /* accent color */
+    color: #000;
 }
 body.light a[href] {
     color: #22f;
@@ -57,4 +59,18 @@ body.dark a[href]:visited {
     align-items: center;
 
     border-bottom: solid 2px var(--fg);
+}
+
+.content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: scroll;
+}
+.content ~ span {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0%;
+    transition: opacity .5s ease;
 }
