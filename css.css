@@ -39,4 +39,5 @@ body, body.light {
 
     padding-bottom: 16px;
     border-bottom: solid 2px var(--fg);
+    box-sizing: border-box;
 }
