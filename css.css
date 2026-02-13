@@ -8,7 +8,7 @@ body.dark {
     --bg: #000;
     --fg: #fff;
 }
-body.light {
+body, body.light {
     --bg: #fff;
     --fg: #000;
 }
