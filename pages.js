@@ -17,11 +17,11 @@ function handleHash(delay = 0) {
 
         if (page.id === location.hash.substring(1)) {
             setTimeout(()=>{
-                page.style.opacity = '1';
+                page.style.opacity = '100%';
                 document.title = `${page.dataset.label} - PRISM Hub`;
             }, delay) // for page switching
         } else {
-            page.style.opacity = '0';
+            page.style.opacity = '0%';
         }
     }
 }
