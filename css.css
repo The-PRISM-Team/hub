@@ -4,14 +4,24 @@ html, body {
     height: 100vh;
     overflow: hidden;
 }
+body {
+    background-color: var(--bg);
+}
+
+/* themes */
 body.dark {
     --bg: #000;
     --fg: #fff;
+    --acc: #00ff80; /* accent color */
+    accent-color: var(--acc);
 }
 body, body.light {
     --bg: #fff;
     --fg: #000;
+    --acc: #ff0080; /* accent color */
+    accent-color: var(--acc);
 }
+
 
 .top-bar {
     background-color: var(--bg);
@@ -19,9 +29,14 @@ body, body.light {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
     height: fit-content;
     min-height: 32px;
+
+    display: flex;
+    align-items: center;
+
     padding-bottom: 16px;
     border-bottom: solid 2px var(--fg);
 }
