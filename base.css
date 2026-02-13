@@ -6,6 +6,14 @@ html, body {
 }
 body {
     background-color: var(--bg);
+    accent-color: var(--acc);
+
+    transition:
+    background-color .25s ease-out,
+    accent-color .25s ease-out;
+}
+body a[href] {
+    transition: color .25s ease-out;
 }
 
 /* themes */
@@ -13,13 +21,11 @@ body.dark {
     --bg: #080010;
     --fg: #fff;
     --acc: #00ff80; /* accent color */
-    accent-color: var(--acc);
 }
 body, body.light {
     --bg: #eee;
     --fg: #000;
     --acc: #ff0080; /* accent color */
-    accent-color: var(--acc);
 }
 body.light a[href] {
     color: #22f;
