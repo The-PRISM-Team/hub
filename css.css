@@ -10,7 +10,7 @@ body {
 
 /* themes */
 body.dark {
-    --bg: #000;
+    --bg: #181020;
     --fg: #fff;
     --acc: #00ff80; /* accent color */
     accent-color: var(--acc);
@@ -25,7 +25,7 @@ body, body.light {
 
 .top-bar {
     background-color: #0000;
-    backdrop-filter: brightness(150%) blur(2px);
+    backdrop-filter: brightness(200%) blur(2px);
 
     position: fixed;
     top: 0;
