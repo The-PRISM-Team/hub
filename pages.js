@@ -6,7 +6,7 @@ for (let i = 0; i < pages.length; i++) {
 
     const pagelink = document.createElement('a');
     pagelink.href = '/#' + page.id;
-    pagelink.textContent = page.dataset.label;
+    pagelink.textContent = page.getAttribute('label');
 
     topBar.appendChild(pagelink);
 }
