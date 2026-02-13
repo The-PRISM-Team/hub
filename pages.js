@@ -13,7 +13,7 @@ for (let i = 0; i < pages.length; i++) {
 
     // add page JS
     const pageScript = document.createElement('script');
-    pageScript.src = `/${page.id}`;
+    pageScript.src = `/${page.id}.js`;
 
     document.body.appendChild(pageScript);
 }
