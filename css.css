@@ -31,8 +31,7 @@ body, body.light {
     left: 0;
 
     width: 100%;
-    height: fit-content;
-    min-height: 32px;
+    height: 48px;
 
     display: flex;
     justify-content: center;
