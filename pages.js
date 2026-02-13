@@ -11,7 +11,7 @@ for (let i = 0; i < pages.length; i++) {
     topBar.appendChild(pagelink);
 }
 
-function handleHash() {
+function handleHash(delay = 0) {
     for (let i = 0; i < pages.length; i++) {
         const page = pages[i];
 
@@ -19,12 +19,12 @@ function handleHash() {
             setTimeout(()=>{
                 page.style.opacity = '1';
                 document.title = `${page.dataset.label} - PRISM Hub`;
-            }, 1.5e3)
+            }, delay) // for page switching
         } else {
             page.style.opacity = '0';
         }
     }
 }
 
-window.addEventListener("hashchange", handleHash);
+window.addEventListener("hashchange", ()=>handleHash(1.5e3));
 handleHash();
