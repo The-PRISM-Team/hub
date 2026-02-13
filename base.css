@@ -67,7 +67,8 @@ body.dark a[href]:visited {
     left: 0;
     overflow: scroll;
 }
-.content ~ span {
+.content span {
+    min-height: 100%;
     position: fixed;
     top: 0;
     left: 0;
