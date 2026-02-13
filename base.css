@@ -10,22 +10,34 @@ body {
 
 /* themes */
 body.dark {
-    --bg: #181020;
+    --bg: #080010;
     --fg: #fff;
     --acc: #00ff80; /* accent color */
     accent-color: var(--acc);
 }
 body, body.light {
-    --bg: #fff;
+    --bg: #eee;
     --fg: #000;
     --acc: #ff0080; /* accent color */
     accent-color: var(--acc);
+}
+body.light a[href] {
+    color: #22f;
+}
+body.light a[href]:visited {
+    color: #4828ff;
+}
+body.dark a[href] {
+    color: #aaf;
+}
+body.dark a[href]:visited {
+    color: #c8f;
 }
 
 
 .top-bar {
     background-color: #0000;
-    backdrop-filter: brightness(200%) blur(2px);
+    backdrop-filter: brightness(125%) blur(2px);
 
     position: fixed;
     top: 0;
