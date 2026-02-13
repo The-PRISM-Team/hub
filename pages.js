@@ -26,5 +26,5 @@ function handleHash(delay = 0) {
     }
 }
 
-window.addEventListener("hashchange", ()=>handleHash(1.5e3));
+window.addEventListener("hashchange", () => handleHash(500));
 handleHash();
