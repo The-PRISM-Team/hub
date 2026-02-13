@@ -9,7 +9,7 @@ for (let i = 0; i < pages.length; i++) {
     pageLink.href = '/#' + page.id;
     pageLink.textContent = page.getAttribute('label');
 
-    topBar.appendChild(pagelink);
+    topBar.appendChild(pageLink);
 
     // add page JS
     const pageScript = document.createElement('script');
