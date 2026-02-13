@@ -19,10 +19,16 @@ for (let i = 0; i < pages.length; i++) {
 }
 
 function handleHash(delay = 0) {
+    const targetPage = // redirect to homepage if page doesn't exist
+        document.getElementById(targetPage) ?
+        location.hash.substring(1)
+        :
+        '';
+
     for (let i = 0; i < pages.length; i++) {
         const page = pages[i];
 
-        if (page.id === location.hash.substring(1)) {
+        if (page.id === targetPage) {
             setTimeout(()=>{
                 page.style.opacity = '100%';
                 document.title = `${page.getAttribute('label')} - PRISM Hub`;
