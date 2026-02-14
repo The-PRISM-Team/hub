@@ -15,12 +15,14 @@ for (let i = 0; i < pages.length; i++) {
     const pageScript = document.createElement('script');
     pageScript.src = `/${page.id}.js`;
 
-    document.body.appendChild(pageScript);
+    try {
+        document.body.appendChild(pageScript);
+    } catch {} // ignore error msgs
 }
 
 function handleHash(delay = 0) {
     const targetPage = // redirect to homepage if page doesn't exist
-        document.getElementById(targetPage) ?
+        document.getElementById(location.hash.substring(1)) ?
         location.hash.substring(1)
         :
         '';
