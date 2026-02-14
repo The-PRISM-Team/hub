@@ -6,8 +6,8 @@ document.body.className =
     :
     'light';
 
-function toggleDark() {
-    localStorage.darkMode = localStorage.darkMode !== 'true';
+function toggleDark(dark) {
+    localStorage.darkMode = dark;
 
     document.body.className =
         localStorage.darkMode === 'true' ?
