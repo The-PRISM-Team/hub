@@ -73,10 +73,12 @@ body.dark a[href]:visited {
 .content span {
     width: 100%;
     min-height: calc(100% - 64px);
+    height: fit-content;
     position: fixed;
     top: 64px;
     left: 0;
     opacity: 0%;
+    pointer-events: none;
     transition: opacity .25s ease;
     text-align: center;
 }

@@ -33,10 +33,12 @@ function handleHash(delay = 0) {
         if (page.id === targetPage) {
             setTimeout(()=>{
                 page.style.opacity = '100%';
+                page.style.pointerEvents = 'auto';
                 document.title = `${page.getAttribute('label')} - PRISM Hub`;
                 location.hash = '#' + page.id; // enforce hash in url
             }, delay) // for page switching
         } else {
+            page.style.pointerEvents = 'none';
             page.style.opacity = '0%';
         }
     }
