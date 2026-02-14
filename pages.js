@@ -12,12 +12,12 @@ for (let i = 0; i < pages.length; i++) {
     topBar.appendChild(pageLink);
 
     // add page JS
-    const pageScript = document.createElement('script');
-    pageScript.src = `/${page.id}.js`;
+    if (page.getAttribute('script')) {
+        const pageScript = document.createElement('script');
+        pageScript.src = page.getAttribute('script');
 
-    try {
         document.body.appendChild(pageScript);
-    } catch {} // ignore error msgs
+    }
 }
 
 function handleHash(delay = 0) {
@@ -25,7 +25,7 @@ function handleHash(delay = 0) {
         document.getElementById(location.hash.substring(1)) ?
         location.hash.substring(1)
         :
-        '';
+        'home';
 
     for (let i = 0; i < pages.length; i++) {
         const page = pages[i];
@@ -34,6 +34,7 @@ function handleHash(delay = 0) {
             setTimeout(()=>{
                 page.style.opacity = '100%';
                 document.title = `${page.getAttribute('label')} - PRISM Hub`;
+                location.hash = '#' + page.id; // enforce hash in url
             }, delay) // for page switching
         } else {
             page.style.opacity = '0%';

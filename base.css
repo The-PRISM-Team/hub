@@ -78,3 +78,10 @@ body.dark a[href]:visited {
     transition: opacity .25s ease;
     text-align: center;
 }
+
+.logo {
+    height: 24px;
+    position: fixed;
+    left: 0;
+    padding: 12px;
+}

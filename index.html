@@ -9,19 +9,19 @@
     </head>
     <body class="light">
         <div class="top-bar">
-            <img src="/favicon.png" height='32' style="position: fixed; left: 0; padding: 12px;"></img>
+            <img src="/favicon.png" class="logo"></img>
         </div>
         <div class="content">
-            <span id="" label="Home">
+            <span id="home" label="Home">
                 <h1>this is the home page</h1>
             </span>
             <span id="about" label="About PRISM">
                 <h1>test</h1>
             </span>
-            <span id="settings" label="Settings">
+            <span id="settings" label="Settings" script="/settings.js">
                 <h1>Settings</h1>
                 <br>
-                <a>Dark mode? <input type="checkbox" id="darkmode-checkbox"/></a>
+                <label>Dark mode? <input type="checkbox" id="darkmode-checkbox"/></label>
             </span>
         </div>
         <script src="/base.js"></script>
