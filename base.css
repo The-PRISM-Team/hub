@@ -44,8 +44,8 @@ body.dark a[href]:visited {
 
 
 .top-bar {
-    background-color: #0000;
-    backdrop-filter: brightness(125%) blur(2px);
+    background-color: #fff2;
+    backdrop-filter: blur(8px);
 
     position: fixed;
     top: 0;
