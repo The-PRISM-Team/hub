@@ -1,4 +1,5 @@
-if (localStorage.darkMode == null) localStorage.darkMode = 'false';
+const prefersDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)').matches : false; 
+if (localStorage.darkMode == null) localStorage.darkMode = prefersDark;
 
 document.body.className =
     localStorage.darkMode === 'true' ?
