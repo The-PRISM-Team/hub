@@ -25,7 +25,7 @@ function handleHash(delay = 0) {
         document.getElementById(location.hash.substring(1)) ?
         location.hash.substring(1)
         :
-        'home';
+        'about';
 
     for (let i = 0; i < pages.length; i++) {
         const page = pages[i];
