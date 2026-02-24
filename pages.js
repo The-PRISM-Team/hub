@@ -3,6 +3,12 @@ const topBar = document.body.querySelector('.top-bar');
 
 for (let i = 0; i < pages.length; i++) {
     const page = pages[i];
+    
+    // add breathing room to page
+    const breaks = 2;
+    for (let i = 0; i < breaks; i++) {
+        page.appendChild(document.createElement('br'));
+    }
 
     // add link to page
     const pageLink = document.createElement('a');
