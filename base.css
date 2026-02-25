@@ -58,6 +58,7 @@ body.dark a[href]:visited {
     justify-content: center;
     align-items: center;
     gap: 15px;
+    font-size: 18px;
 
     border-bottom: solid 2px var(--fg);
 }
