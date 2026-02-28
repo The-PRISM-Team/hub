@@ -61,6 +61,8 @@ body.dark a[href]:visited {
     font-size: 18px;
 
     border-bottom: solid 2px var(--fg);
+
+    z-index: calc(infinity);
 }
 
 .content {
@@ -98,7 +100,7 @@ body.dark a[href]:visited {
     pointer-events: auto;
     transition:
         opacity .25s ease,
-        transform .5s ease-out;
+        transform .5s ease;
     text-align: center;
     overflow: scroll;
 }
