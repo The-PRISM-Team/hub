@@ -16,3 +16,5 @@ function toggleDark(dark) {
         :
         'light';
 }
+
+let reduceMovement;

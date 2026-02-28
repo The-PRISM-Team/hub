@@ -27,25 +27,23 @@ for (let i = 0; i < pages.length; i++) {
 }
 
 function handleHash(delay = 0) {
-    const targetPage = // redirect to homepage if page doesn't exist
+    const targetPage =
         document.getElementById(location.hash.substring(1)) ?
             location.hash.substring(1)
         :
-            'pages';
+            'pages'; // redirect to "home"page if page doesn't exist
 
     for (let i = 0; i < pages.length; i++) {
         const page = pages[i];
 
         if (page.id === targetPage) {
             setTimeout(()=>{
-                page.style.opacity = '100%';
-                page.style.pointerEvents = 'auto';
+                page.classList.add('active');
                 document.title = `${page.getAttribute('label')} - PRISM Hub`;
                 location.hash = '#' + page.id; // enforce hash in url
             }, delay) // for page switching
         } else {
-            page.style.pointerEvents = 'none';
-            page.style.opacity = '0%';
+            page.classList.remove('active');
         }
     }
 }
