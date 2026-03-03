@@ -1,4 +1,4 @@
-const pages = document.body.querySelector('.content').children;
+const pages = document.body.querySelectorAll('.content.span');
 const topBar = document.body.querySelector('.top-bar');
 
 for (let i = 0; i < pages.length; i++) {
