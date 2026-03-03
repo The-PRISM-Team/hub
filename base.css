@@ -88,10 +88,10 @@ body.dark a[href]:visited {
     overflow: scroll;
 }
 .content span:not(.active) {
-    transform: translateY(-50%);
+    transform: translateY(-20%);
 }
 .content span:not(.active).reduce-movement {
-    transform: translateY(-10%);
+    transform: translateY(-5%);
 }
 .content span.active {
     width: 100%;
