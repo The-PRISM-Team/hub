@@ -19,5 +19,4 @@ reducemoveCheckbox.addEventListener('change', () => {
             page.classList.remove('reduce-movement')
         })  
     }
-
 })
