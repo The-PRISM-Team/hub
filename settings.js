@@ -5,7 +5,7 @@ darkmodeCheckbox.addEventListener('change', () => {
     toggleDark(localStorage.darkMode !== 'true');
 })
 
-const reducemoveCheckbox = document.getElementById('reduceovement-checkbox');
+const reducemoveCheckbox = document.getElementById('reducemovement-checkbox');
 reducemoveCheckbox.checked = localStorage.reduceMovement === 'true';
 reducemoveCheckbox.addEventListener('change', () => {
     localStorage.reduceMovement = reducemoveCheckbox.checked;
