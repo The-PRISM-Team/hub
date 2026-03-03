@@ -9,8 +9,8 @@ body {
     accent-color: var(--acc);
 
     transition:
-    background-color .25s ease-out,
-    accent-color .25s ease-out;
+        background-color .25s ease-out,
+        accent-color .25s ease-out;
 }
 body a[href] {
     transition: color .25s ease-out;
@@ -87,10 +87,10 @@ body.dark a[href]:visited {
     text-align: center;
     overflow: scroll;
 }
-.content.span:not(.active) {
+.content span:not(.active) {
     transform: translateY(-50%);
 }
-.content.span:not(.active).reduce-movement {
+.content span:not(.active).reduce-movement {
     transform: translateY(-10%);
 }
 .content span.active {
