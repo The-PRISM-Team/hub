@@ -1,6 +1,28 @@
 const pages = document.body.querySelectorAll('.content span');
+const pagesDiv = document.body.getElementById('pages-div');
 const topBar = document.body.querySelector('.top-bar');
 
+// render page list
+const r = await fetch('https://prism-hub.vercel.app/pages.json');
+const pageJson = await r.json();
+const pageList = Object.entries(pageJson.pagelist).map(([page, metadata]) => {
+    return {
+        url: pageJson.urlpattern.replace('{page}', page),
+        ...metadata
+    }
+});
+for (const page of pageList) {
+    const link = document.createElement('a');
+    link.href = page.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.innerHTML = `<p>${page.title}</p>`;
+    pagesDiv.appendChild(link);
+}
+pagesDiv.style.display = 'revert';
+document.getElementById('loading-pages').remove();
+
+// render pages
 for (let i = 0; i < pages.length; i++) {
     const page = pages[i];
     

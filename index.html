@@ -4,24 +4,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>PRISM Hub</title>
-        <link rel="stylesheet" href="/base.css"/>
-        <link rel="icon" href="/favicon.png" type="image/png"/>
+        <link rel="stylesheet" href="./styles.css"/>
+        <link rel="icon" href="./favicon.png" type="image/png"/>
     </head>
     <body class="light">
         <div class="top-bar">
-            <img src="/favicon.png" class="logo"></img>
+            <img src="./favicon.png" class="logo"></img>
         </div>
+
         <div class="content">
             <span id="pages" label="Pages">
                 <h1>Official PRISM page list</h1>
                 <br>
-                <a href="https://prism-hub.vercel.app/">
-                    <p>PRISM Hub</p>
-                </a>
-
-                <a href="https://prism-noema.vercel.app/" target="_blank" rel="noopener noreferrer">
-                    <p>Noema [Project]</p>
-                </a>
+                <p id="loading-pages">Loading...</p>
+                <div id="pages-div" style="display: none;"></div>
             </span>
             <span id="about" label="About PRISM">
                 <h1>What even is PRISM anyway?</h1>
@@ -155,7 +151,7 @@
                 <br>
             </span>
         </div>
-        <script src="/base.js"></script>
-        <script src="/pages.js"></script>
+
+        <script src="./pages.js"></script>
     </body>
 </html>
