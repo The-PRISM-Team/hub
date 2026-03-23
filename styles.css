@@ -100,10 +100,10 @@ body.dark a[href]:visited {
     overflow: scroll;
 }
 .content span:not(.active) {
-    transform: translateY(-20%);
+    transform: translateY(-48px);
 }
 .content span:not(.active).reduce-movement {
-    transform: translateY(-5%);
+    transform: translateY(-16px);
 }
 .content span.active {
     width: 100%;
