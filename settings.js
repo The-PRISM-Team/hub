@@ -1,23 +1,12 @@
-// apply starting settings
-const prefersDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)').matches : false; 
-if (localStorage.darkMode == null) localStorage.darkMode = prefersDark;
-
-document.body.className =
-    localStorage.darkMode === 'true' ?
-    'dark'
-    :
-    'light';
-
+// useful functions
 function toggleDark(dark) {
     localStorage.darkMode = dark;
 
-    document.body.className =
-        localStorage.darkMode === 'true' ?
-        'dark'
-        :
-        'light';
+    if (localStorage.darkMode === 'true')
+        document.body.className = 'dark';
+    else
+        document.body.className = 'light';
 }
-
 
 // dark mode
 const darkmodeCheckbox = document.getElementById('darkmode-checkbox');
@@ -26,6 +15,7 @@ darkmodeCheckbox.addEventListener('change', () => {
     toggleDark(localStorage.darkMode !== 'true');
 })
 
+// reduce movement
 const reducemoveCheckbox = document.getElementById('reducemovement-checkbox');
 reducemoveCheckbox.checked = localStorage.reduceMovement === 'true';
 reducemoveCheckbox.addEventListener('change', () => {
@@ -33,11 +23,19 @@ reducemoveCheckbox.addEventListener('change', () => {
 
     if (reducemoveCheckbox.checked) {
         pages.forEach(page => {
-            page.classList.add('reduce-movement')
+            page.classList.add('reduce-movement');
         })
     } else {
         pages.forEach(page => {
-            page.classList.remove('reduce-movement')
+            page.classList.remove('reduce-movement');
         })  
     }
 })
+
+// apply starting settings
+const prefersDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)')?.matches : false; 
+toggleDark(
+    localStorage.darkMode != null
+    ? localStorage.darkMode === 'true'
+    : prefersDark
+);
