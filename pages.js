@@ -1,5 +1,5 @@
 const pages = document.body.querySelectorAll('.content span');
-const pagesDiv = document.body.getElementById('pages-div');
+const pagesDiv = document.getElementById('pages-div');
 const topBar = document.body.querySelector('.top-bar');
 
 async function renderPageList() {
