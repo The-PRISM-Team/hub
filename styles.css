@@ -46,7 +46,7 @@ body.dark {
 body.dark a[href] {
     color: #aaf;
 }
-body.dark a[href] {
+body.dark a[href]:hover {
     color: #77f;
 }
 body.dark a[href]:visited {
