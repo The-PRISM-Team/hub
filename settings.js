@@ -1,4 +1,4 @@
-// useful functions
+// setting functions
 function toggleDark(dark) {
     localStorage.darkMode = dark;
 
@@ -6,6 +6,19 @@ function toggleDark(dark) {
         document.body.className = 'dark';
     else
         document.body.className = 'light';
+}
+function reduceMovement(reduce) {
+    localStorage.reduceMovement = reduce;
+
+    if (reduce) {
+        pages.forEach(page => {
+            page.classList.add('reduce-movement');
+        })
+    } else {
+        pages.forEach(page => {
+            page.classList.remove('reduce-movement');
+        })
+    }
 }
 
 // dark mode
@@ -18,19 +31,7 @@ darkmodeCheckbox.addEventListener('change', () => {
 // reduce movement
 const reducemoveCheckbox = document.getElementById('reducemovement-checkbox');
 reducemoveCheckbox.checked = localStorage.reduceMovement === 'true';
-reducemoveCheckbox.addEventListener('change', () => {
-    localStorage.reduceMovement = reducemoveCheckbox.checked;
-
-    if (reducemoveCheckbox.checked) {
-        pages.forEach(page => {
-            page.classList.add('reduce-movement');
-        })
-    } else {
-        pages.forEach(page => {
-            page.classList.remove('reduce-movement');
-        })  
-    }
-})
+reducemoveCheckbox.addEventListener('change', () => reduceMovement(reducemoveCheckbox.checked));
 
 // apply starting settings
 const prefersDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)')?.matches : false; 
@@ -39,3 +40,4 @@ toggleDark(
     ? localStorage.darkMode === 'true'
     : prefersDark
 );
+reduceMovement(reducemoveCheckbox.checked);
