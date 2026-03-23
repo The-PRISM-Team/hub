@@ -3,6 +3,8 @@ html, body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    padding: 0;
+    margin: 0;
 }
 body {
     background-color: var(--bg);
@@ -16,13 +18,8 @@ body a[href] {
     transition: color .25s ease-out;
 }
 
-/* themes */
-body.dark {
-    --bg: #080010;
-    --fg: #fff;
-    --acc: #00ff80; /* accent color */
-    color: #fff;
-}
+/* === themes === */
+/* light theme */
 body, body.light {
     --bg: #eee;
     --fg: #000;
@@ -38,6 +35,14 @@ body.light a[href]:hover {
 body.light a[href]:visited {
     color: #4828ff;
 }
+
+/* dark theme */
+body.dark {
+    --bg: #080010;
+    --fg: #fff;
+    --acc: #00ff80; /* accent color */
+    color: #fff;
+}
 body.dark a[href] {
     color: #aaf;
 }
@@ -48,7 +53,7 @@ body.dark a[href]:visited {
     color: #c8f;
 }
 
-
+/* === styles === */
 .top-bar {
     background-color: #fff2;
     backdrop-filter: blur(8px);
