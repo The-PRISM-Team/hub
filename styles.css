@@ -14,8 +14,9 @@ body {
         background-color .25s ease-out,
         accent-color .25s ease-out;
 }
-body a[href] {
+a[href] {
     transition: color .25s ease-out;
+    user-select: none;
 }
 
 /* === themes === */
