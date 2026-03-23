@@ -1,0 +1,11 @@
+{
+    "urlpattern": "https://prism-{page}.vercel.app/",
+    "pagelist": {
+        "noema": {
+            "title": "Project Noema"
+        },
+        "hub": {
+            "title": "PRISM Hub"
+        }
+    }
+}

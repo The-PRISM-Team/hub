@@ -32,11 +32,17 @@ body, body.light {
 body.light a[href] {
     color: #22f;
 }
+body.light a[href]:hover {
+    color: #66f;
+}
 body.light a[href]:visited {
     color: #4828ff;
 }
 body.dark a[href] {
     color: #aaf;
+}
+body.dark a[href] {
+    color: #77f;
 }
 body.dark a[href]:visited {
     color: #c8f;
