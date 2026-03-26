@@ -51,21 +51,30 @@ for (let i = 0; i < pages.length; i++) {
 }
 
 function handleHash(delay = 0) {
-    const targetPage =
-        document.getElementById(location.hash.substring(1)) ?
-            location.hash.substring(1)
-        :
-            'pages'; // redirect to "home"page if page doesn't exist
+    const hashRegex = /#([a-z0-9]+)(?:-(.+))?/i.exec('#credits-translation');
+    console.log(hashRegex)
+    const selectedPage = hashRegex?.[1] ?? 'pages';
+    const selectedElement = hashRegex?.[2] ?? null;
+    if (selectedElement) {
+        document.querySelector(`.content [id=${selectedPage}] [hash-id=${selectedElement}]`)
+    }
 
     for (let i = 0; i < pages.length; i++) {
         const page = pages[i];
 
-        if (page.id === targetPage) {
+        if (page.id === selectedPage) {
             setTimeout(()=>{
                 page.classList.add('active');
                 document.title = `${page.getAttribute('label')} - PRISM Hub`;
-                location.hash = '#' + page.id; // enforce hash in url
-            }, delay) // for page switching
+                location.hash = '#' + selectedPage;
+
+                if (selectedElement != null) {
+                    document.querySelector(`.content [id=${selectedPage}] [hash-id=${selectedElement}]`)
+                    .scrollIntoView({
+                        behavior: 'smooth'
+                    })
+                };
+            }, delay)
         } else {
             page.classList.remove('active');
         }
