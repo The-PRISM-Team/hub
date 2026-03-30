@@ -51,7 +51,7 @@ for (let i = 0; i < pages.length; i++) {
 }
 
 function handleHash(delay = 0) {
-    const hashRegex = /#([a-z0-9]+)(?:-(.+))?/i.exec('#credits-translation');
+    const hashRegex = /#([a-z0-9]+)(?:-(.+))?/i.exec(location.hash);
     console.log(hashRegex)
     const selectedPage = hashRegex?.[1] ?? 'pages';
     const selectedElement = hashRegex?.[2] ?? null;
