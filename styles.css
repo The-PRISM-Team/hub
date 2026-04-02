@@ -141,3 +141,12 @@ body.dark a[href]:visited {
     box-shadow: 0px 0px 5px #fff8;
     background-color: #fff8;
 }
+a[hash-id], p[hash-id] {
+    text-shadow: 0px 0px 2px #fff2;
+}
+a[hash-id]:hover, p[hash-id]:hover {
+    text-shadow: 0px 0px 3px #fff4;
+}
+a[hash-id]:active, p[hash-id]:active {
+    text-shadow: 0px 0px 5px #fff8;
+}
