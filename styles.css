@@ -128,3 +128,16 @@ body.dark a[href]:visited {
     left: 0;
     padding: 12px;
 }
+
+[hash-id] {
+    box-shadow: 0px 0px 2px #fff2;
+    background-color: #fff2;
+}
+[hash-id]:hover {
+    box-shadow: 0px 0px 3px #fff4;
+    background-color: #fff4;
+}
+[hash-id]:active {
+    box-shadow: 0px 0px 5px #fff8;
+    background-color: #fff8;
+}
