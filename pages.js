@@ -51,14 +51,28 @@ for (let i = 0; i < pages.length; i++) {
 }
 
 function handleHash(delay = 0) {
+    // get page selectors
     const hashRegex = /#([a-z0-9]+)(?:-(.+))?/i.exec(location.hash);
-    console.log(hashRegex)
-    const selectedPage = hashRegex?.[1] ?? 'pages';
-    const selectedElement = hashRegex?.[2] ?? null;
-    if (selectedElement) {
-        document.querySelector(`.content [id=${selectedPage}] [hash-id=${selectedElement}]`)
+
+    // set fallbacks
+    const defaultPage = 'pages';
+    const defaultElement = null;
+
+    // set selected page
+    let selectedPage = hashRegex?.[1] ?? defaultPage;
+    let selectedElement = hashRegex?.[2] ?? defaultElement;
+
+    // fallback if page selectors don't actually exist
+    if (selectedPage !== defaultPage) {
+        if (document.querySelector(`.content [id=${selectedPage}]`) == null)
+            selectedPage = defaultPage;
+    }
+    if (selectedElement !== defaultElement) {
+        if (document.querySelector(`.content [id=${selectedPage}] [hash-id=${selectedElement}]`) == null)
+            selectedElement = defaultElement;
     }
 
+    // focus on page
     for (let i = 0; i < pages.length; i++) {
         const page = pages[i];
 
