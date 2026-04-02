@@ -38,6 +38,11 @@ for (let i = 0; i < pages.length; i++) {
     const pageLink = document.createElement('a');
     pageLink.href = '/#' + page.id;
     pageLink.textContent = page.getAttribute('label');
+    pageLink.addEventListener('click', ()=>{
+        if (window.getSelection != null) {
+            window.getSelection().removeAllRanges();
+        }
+    });
 
     topBar.appendChild(pageLink);
 
