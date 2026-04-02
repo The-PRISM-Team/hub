@@ -87,14 +87,16 @@ function handleHash(delay = 0) {
             setTimeout(()=>{
                 page.classList.add('active');
                 document.title = `${page.getAttribute('label')} - PRISM Hub`;
-                location.hash = '#' + selectedPage;
 
                 if (selectedElement != null) {
                     document.querySelector(`.content [id=${selectedPage}] [hash-id=${selectedElement}]`)
                     .scrollIntoView({
                         behavior: 'smooth'
-                    })
-                };
+                    });
+                    if (/#([a-z0-9]+)(?:-(.+))?/i.test(location.hash)) {
+                        location.hash = `#${selectedPage}-${selectedElement}`;
+                    }
+                }
             }, delay)
         } else {
             page.classList.remove('active');
