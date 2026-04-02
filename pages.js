@@ -64,8 +64,10 @@ function handleHash(delay = 0) {
 
     // fallback if page selectors don't actually exist
     if (selectedPage !== defaultPage) {
-        if (document.querySelector(`.content [id=${selectedPage}]`) == null)
+        if (document.querySelector(`.content [id=${selectedPage}]`) == null) {
             selectedPage = defaultPage;
+            selectedElement = defaultElement;
+        }
     }
     if (selectedElement !== defaultElement) {
         if (document.querySelector(`.content [id=${selectedPage}] [hash-id=${selectedElement}]`) == null)
