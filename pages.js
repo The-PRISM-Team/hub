@@ -44,6 +44,8 @@ for (let i = 0; i < pages.length; i++) {
         }
     });
 
+    // add hash-id copy functionality
+
     topBar.appendChild(pageLink);
 
     // add page JS

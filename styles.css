@@ -141,12 +141,44 @@ body.dark a[href]:visited {
     box-shadow: 0px 0px 5px #fff8;
     background-color: #fff8;
 }
-a[hash-id], p[hash-id] {
-    text-shadow: 0px 0px 2px #fff2;
+a[hash-id]
+,p[hash-id]
+,h1[hash-id]
+,h2[hash-id]
+,h3[hash-id]
+,h4[hash-id]
+,h5[hash-id]
+,h6[hash-id]
+{
+    text-shadow: 0px 0px 6px #fff3;
+    background-color: #0000;
+    box-shadow: none;
+    transition: text-shadow .15s ease;
 }
-a[hash-id]:hover, p[hash-id]:hover {
-    text-shadow: 0px 0px 3px #fff4;
+a[hash-id]:hover
+,p[hash-id]:hover
+,h1[hash-id]:hover
+,h2[hash-id]:hover
+,h3[hash-id]:hover
+,h4[hash-id]:hover
+,h5[hash-id]:hover
+,h6[hash-id]:hover
+{
+    text-shadow: 0px 0px 7px #fff6;
+    background-color: #0000;
+    box-shadow: none;
 }
-a[hash-id]:active, p[hash-id]:active {
-    text-shadow: 0px 0px 5px #fff8;
+a[hash-id]:active
+,p[hash-id]:active
+,h1[hash-id]:active
+,h2[hash-id]:active
+,h3[hash-id]:active
+,h4[hash-id]:active
+,h5[hash-id]:active
+,h6[hash-id]:active
+{
+    text-shadow: 0px 0px 8px #fffb;
+    background-color: #0000;
+    box-shadow: none;
+    transition: none;
 }
