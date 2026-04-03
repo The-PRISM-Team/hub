@@ -132,6 +132,9 @@ body.dark a[href]:visited {
 [hash-id] {
     box-shadow: 0px 0px 2px #fff2;
     background-color: #fff2;
+    transition:
+        box-shadow .15s ease,
+        backgroud-color .15s ease;
 }
 [hash-id]:hover {
     box-shadow: 0px 0px 3px #fff4;
@@ -140,9 +143,11 @@ body.dark a[href]:visited {
 [hash-id]:active {
     box-shadow: 0px 0px 5px #fff8;
     background-color: #fff8;
+    transition: none;
 }
 a[hash-id]
 ,p[hash-id]
+,label[hash-id]
 ,h1[hash-id]
 ,h2[hash-id]
 ,h3[hash-id]
@@ -157,6 +162,7 @@ a[hash-id]
 }
 a[hash-id]:hover
 ,p[hash-id]:hover
+,label[hash-id]:hover
 ,h1[hash-id]:hover
 ,h2[hash-id]:hover
 ,h3[hash-id]:hover
@@ -170,6 +176,7 @@ a[hash-id]:hover
 }
 a[hash-id]:active
 ,p[hash-id]:active
+,label[hash-id]:active
 ,h1[hash-id]:active
 ,h2[hash-id]:active
 ,h3[hash-id]:active

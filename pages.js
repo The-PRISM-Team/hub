@@ -25,8 +25,7 @@ async function renderPageList() {
 renderPageList();
 
 // render pages
-for (let i = 0; i < pages.length; i++) {
-    const page = pages[i];
+for (const page of pages) {
     
     // add breathing room to page
     const breaks = 2;
@@ -45,6 +44,16 @@ for (let i = 0; i < pages.length; i++) {
     });
 
     // add hash-id copy functionality
+    const hashIdElements = page.querySelectorAll('[hash-id]');
+    for (const el of hashIdElements) {
+        el.addEventListener('click', async ()=>{
+            await navigator.clipboard.writeText(
+                location.origin
+                +
+                `/#${page.id}:${el.getAttribute('hash-id')}`
+            );
+        });
+    }
 
     topBar.appendChild(pageLink);
 
