@@ -47,11 +47,12 @@ for (const page of pages) {
     const hashIdElements = page.querySelectorAll('[hash-id]');
     for (const el of hashIdElements) {
         el.addEventListener('click', async ()=>{
-            await navigator.clipboard.writeText(
+            const href = 
                 location.origin
                 +
-                `/#${page.id}:${el.getAttribute('hash-id')}`
-            );
+                `/#${page.id}:${el.getAttribute('hash-id')}`;
+            await navigator.clipboard.writeText(href);
+            location.href = href;
         });
     }
 
