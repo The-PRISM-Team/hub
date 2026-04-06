@@ -105,9 +105,6 @@ function handleHash(delay = 0) {
                     .scrollIntoView({
                         behavior: 'smooth'
                     });
-                    if (/#([a-z0-9]+)(?:-(.+))?/i.test(location.hash)) {
-                        location.hash = `#${selectedPage}:${selectedElement}`;
-                    }
                 }
             }, delay)
         } else {
