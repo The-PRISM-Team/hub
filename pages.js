@@ -69,7 +69,7 @@ for (const page of pages) {
 
 function handleHash(delay = 0) {
     // get page selectors
-    const hashRegex = /#([a-z0-9]+)(?:[-:](.+))?/i.exec(location.hash);
+    const hashRegex = /#([a-z0-9]+)(?::(.+))?/i.exec(location.hash);
 
     // set fallbacks
     const defaultPage = 'pages';
