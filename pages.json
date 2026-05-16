@@ -6,6 +6,9 @@
         },
         "noema": {
             "title": "Project Noema"
+        },
+        "noema-betatest": {
+            "title": "Project Noema (Beta Test)"
         }
     }
 }
