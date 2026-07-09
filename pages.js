@@ -3,7 +3,7 @@ const pagesDiv = document.getElementById('pages-div');
 const topBar = document.body.querySelector('.top-bar');
 
 async function renderPageList() {
-    const r = await fetch('https://prism-hub.vercel.app/pages.json');
+    const r = await fetch(`${location.origin}/pages.json`);
     const pageJson = await r.json();
     const pageList = Object.entries(pageJson.pagelist).map(([page, metadata]) => {
         return {
